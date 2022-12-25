@@ -1,0 +1,119 @@
+{% extends 'pwms_admin/admin_master.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script src="table.js"></script>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    
+    <title>View Request</title>
+</head>
+<body>
+    <div class="col-sm-10">
+      <div class="col">
+        <div class="well">
+            <h3>View Request</h1>
+            </div>
+      </div>
+      <div class="col">
+        <i class="bi bi-plus"></i>
+      </div>
+        
+    </div>
+    <div class="col-sm-10">
+        <div class="well">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                                  <div class="row mt-5">
+                              <div class="col-lg-12">
+                                  <h5>User Requests</h5>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-lg-12">
+                                  <table id="exampl" class="table cell-border " style="width:100%">
+                                      <thead class="TableHead">
+                                          <tr>
+                                              <th >Job Title</th>
+                                              <th>Job Code</th>
+                                              <th>Program</th>
+                                              <th>Applicants</th>
+                                              <th>Status</th>
+                                              <th>Job Post</th>
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                          <!-- <tr class="firstRow">
+                                              <td>Designer</td>
+                                              <td>677639</td>
+                                              <td>GSARIA</td>
+                                              <td>6</td>
+                                              <td>Onging</td>
+                                              <td><div class="toggle">
+                                                  <input type="checkbox">
+                                                  <label for="" class="onbtn">On</label>
+                                                  <label for="" class="ofbtn">Off</label>
+                                                </div></td>
+                                          </tr>
+                                          <tr class="firstRow">
+                                              <td>Senior App Developer</td>
+                                              <td>677639</td>
+                                              <td>FATT</td>
+                                              <td>6</td>
+                                              <td>Onging</td>
+                                              <td><div class="toggle">
+                                                  <input type="checkbox">
+                                                  <label for="" class="onbtn">On</label>
+                                                  <label for="" class="ofbtn">Off</label>
+                                                </div></td>
+                                          </tr>
+                                          <tr class="firstRow">
+                                              <td>Finance Manager</td>
+                                              <td>677639</td>
+                                              <td>FATT</td>
+                                              <td>10</td>
+                                              <td>Completed</td>
+                                              <td><div class="toggle">
+                                                  <input type="checkbox">
+                                                  <label for="" class="onbtn">On</label>
+                                                  <label for="" class="ofbtn">Off</label>
+                                                </div></td>
+                                          </tr>
+                                          <tr class="firstRow">
+                                              <td>Jonior App Developer</td>
+                                              <td>677639</td>
+                                              <td>TAFATT</td>
+                                              <td>10</td>
+                                              <td>Completed</td>
+                                              <td><div class="toggle">
+                                                  <input type="checkbox">
+                                                  <label for="" class="onbtn">On</label>
+                                                  <label for="" class="ofbtn">Off</label>
+                                                </div></td>
+                                          </tr> -->
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+       
+       
+      </div>
+</body>
+</html>
+{% endblock %}

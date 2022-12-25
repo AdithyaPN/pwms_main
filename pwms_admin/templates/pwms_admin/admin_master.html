@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <section class="navigation">
+        <div class="nav-container">
+          <div class="brand">
+            <a href="#!">PWMS</a>
+          </div>
+          <nav>
+            <div class="nav-mobile"><a id="navbar-toggle" href="#!"><span></span></a></div>
+            <ul class="nav-list">
+              
+              <li>
+                <a href="#!">Profile</a>
+                <ul class="navbar-dropdown">
+                  <li>
+                    <a href="#!">Login</a>
+                  </li>
+                  <li>
+                    <a href="#!">Logout</a>
+                  </li>
+                 
+                </ul>
+              </li>
+             
+            </ul>
+          </nav>
+        </div>
+      </section>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">PWMS</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/pwms_admin/dashboard">Dashboard</a></li>
+        <li><a href="/pwms_admin/approveuser">Approve user</a></li>
+        <li><a href="/pwms_admin/viewrequest">Approve Request</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-2 sidenav hidden-xs">
+        <h2>ADMIN</h2>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="/pwms_admin/dashboard">Dashboard</a></li>
+          <li><a href="/pwms_admin/approveuser">Approve user</a></li>
+          <li><a href="/pwms_admin/viewrequest">View Request</a></li>
+        </ul><br>
+      </div>
+      <br>
+      {% block content %}
+
+      
+       {% endblock%}
+      </div>
+      </div>
+
+
+
+
+<script>
+    	(function($) { 
+  $(function() { 
+
+    //  open and close nav 
+    $('#navbar-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+
+
+    // Hamburger toggle
+    $('#navbar-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+
+
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.navbar-dropdown').slideToggle("slow");
+
+      // Close dropdown when select another dropdown
+      $('.navbar-dropdown').not($(this).siblings()).hide("slow");
+      e.stopPropagation();
+    });
+
+
+    // Click outside the dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.navbar-dropdown').hide();
+    });
+  }); 
+})(jQuery); 
+</script>
+</body>
+</html>

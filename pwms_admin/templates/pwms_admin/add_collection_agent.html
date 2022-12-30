@@ -1,0 +1,86 @@
+{% extends 'pwms_admin/admin_master.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Add Agent</title>
+</head>
+<body>
+    <div class="col-sm-10">
+        
+        <div class="col">
+            <div class="well">
+                <h3>Register Collection Agent</h1>
+                
+                </div>
+          </div>
+          <!-- <div class="col" style="margin-right: 4rem;">
+            <button class="addbtn" id="myBtn" style=" margin-bottom: 20px;"><i class="fa fa-plus"></i></button>
+        </div> -->
+        
+  </div>
+  
+  <div class="col-sm-10">
+    <div class="well">
+    <form action="action_page.php">
+        <div class="container">
+          
+          <hr>
+      
+         
+          <input type="text" placeholder=" Name" name="fullname" id="fullname" required>
+      
+         
+          <input type="text" placeholder=" Email" name="email" id="email" required>
+      
+         
+          <input type="tel" placeholder="Phone No" name="phone" id="phone" required>
+          <textarea class="textArea" placeholder="Address" name="Address"></textarea>
+          <input type="number" placeholder="Ward" name="ward" id="ward" required>
+          <input type="file" placeholder="Image" name="image" id="image" required>
+          <hr>
+      
+        
+          <button type="submit" class="registerbtn">Register</button>
+        </div>
+      </form>
+     
+    </div>
+  </div>
+
+
+        
+    <script>
+
+        var modal = document.getElementById("myModal");
+
+        var btn = document.getElementById("myBtn");
+
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+  
+</script>
+</body>
+</html>
+{% endblock %}

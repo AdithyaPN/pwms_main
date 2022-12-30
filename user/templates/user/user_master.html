@@ -15,36 +15,96 @@
     
 </head>
 <body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-grey" style="background-color: rgb(58, 58, 58);box-shadow: 1px 1px 9px grey;">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <!-- <img
+          src=""
+          height="15"
+          alt="MDB Logo"
+          loading="lazy"
+        /> -->
+        <h1 style="color: white; margin-left: 20px;">PWMS</h1>
+      </a>
+     
+      <!-- Left links -->
+    </div>
     
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-            PWMS
-          </a>
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/user/home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/user/user_request">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/user/news_updates">News & Updates</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-              <button class="btn btn-outline-primary" type="submit"><a href="/user/login">Logout</a></button>
-            </form>
-          </div>
-        </div>
-      </nav>
+
+    
+    <div class="d-flex align-items-center">
+      <!-- Icon -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" style="color:white" aria-current="page" href="/user/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  style="color:white" href="/user/user_request">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  style="color:white" href="/user/news_updates">News & Updates</a>
+        </li>
+       
+          <!-- <li class="nav-item">
+            <a class="nav-link"  style="color:white;text-decoration: none;" href="/user/news_updates">Login</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link"  style="color:white;text-decoration: none;" href="#">Logout</a>
+          </li>
+      <!-- Notifications -->
+      <!-- <div class="dropdown">
+        <a
+          class="link-secondary me-3 dropdown-toggle hidden-arrow"
+          href="#"
+        >
+          <i class="fas fa-bell"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        </a>
+       
+      </div> -->
+      <!-- Avatar -->
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href="/user/profile"
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+        </a>
+       
+      </ul>
+    </div>
+   
+  </div>
+  <!-- Container wrapper -->
+</nav>
+
       {% block content %}
 
       
@@ -68,11 +128,9 @@
             <div class="col">
                 <h3>Links</h3>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Clients</a></li>
-                    <li><a href="#">Awards</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="/user/home">Home</a></li>
+                    <li><a href="/user/user_request">Services</a></li>
+                    <li><a href="/user/news_updates">News & Updations</a></li>
                 </ul>
             </div>
             <div class="col">

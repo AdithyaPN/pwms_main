@@ -11,7 +11,7 @@
  @media screen and (max-width: 767px) {
    .row.content {height: auto;} 
  }
- @import url('https://fonts.googleapis.com/css?family=Roboto');
+ /* @import url('https://fonts.googleapis.com/css?family=Roboto'); */
  body{
      margin: 0;
       padding: 0;
@@ -65,13 +65,7 @@
       background: #2581DC;
       color: #ffffff;
  }
-  .navbar-dropdown li a{
-      background: #2581DC;
- }
-  nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
-      padding-left: 4px;
-      content: ' \025BE';
- }
+  
   nav ul li ul li {
       min-width: 190px;
  }
@@ -121,47 +115,7 @@
       .navbar-dropdown {
           position: static;
  }
-  @media screen and (min-width:800px) {
-      .nav-list {
-          display: block !important;
-     }
- }
-  #navbar-toggle {
-      position: absolute;
-      left: 18px;
-      top: 15px;
-      cursor: pointer;
-      padding: 10px 35px 16px 0px;
- }
-  #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
-      cursor: pointer;
-      border-radius: 1px;
-      height: 3px;
-      width: 30px;
-      background: #ffffff;
-      position: absolute;
-      display: block;
-      content: '';
-      transition: all 300ms ease-in-out;
- }
-  #navbar-toggle span:before {
-      top: -10px;
- }
-  #navbar-toggle span:after {
-      bottom: -10px;
- }
-  #navbar-toggle.active span {
-      background-color: transparent;
- }
-  #navbar-toggle.active span:before, #navbar-toggle.active span:after {
-      top: 0;
- }
-  #navbar-toggle.active span:before {
-      transform: rotate(45deg);
- }
-  #navbar-toggle.active span:after {
-      transform: rotate(-45deg);
- }
+  
 } 
 
 /* table part */
@@ -270,8 +224,138 @@ h1 {
     float :right;
     width: 4rem;
     height: 4rem;
-    background-color:#f28e8e;
+    background-color:#346eb1;
     color:white;
     border-radius: 50%;
     border: none;
+    
   }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #4188c2;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  * {box-sizing: border-box}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] ,input[type=tel] ,input[type=number]  {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #dbdada;
+}
+.textArea{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #dbdada;
+}
+input[type=text ]:focus, input[type=password]:focus ,input[type=tel] :focus,input[type=number]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.textArea:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #226f93;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+  

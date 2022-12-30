@@ -2,14 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Admin</title>
+  <title>Collection</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <link rel="stylesheet" href="{% static 'css/collection.css' %}">
 </head>
 <body>
     <section class="navigation">
@@ -23,15 +22,6 @@
               
               <li>
                 <a href="#!">Logout</a>
-                <!-- <ul class="navbar-dropdown">
-                  <li>
-                    <a href="#!">Login</a>
-                  </li>
-                  <li>
-                    <a href="#!">Logout</a>
-                  </li>
-                 
-                </ul> -->
               </li>
              
             </ul>
@@ -51,12 +41,12 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/pwms_admin/dashboard">Dashboard</a></li>
-        <li><a href="/pwms_admin/approveuser">Approve user</a></li>
-        <li><a href="/pwms_admin/viewrequest">Approve Request</a></li>
-        <li><a href="/pwms_admin/add_agent">Add Agent</a></li>
-        <li><a href="/pwms_admin/viewagent">View Agent</a></li>
-        <li><a href="/pwms_admin/viewrequest">News & Updates</a></li>
+        <li class="active"><a href="/collection/dashboard">Dashboard</a></li>
+        <li><a href="/collection/profile">Profile</a></li>
+        <li><a href="/collection/approve_request">Approve Request</a></li>
+        <!-- <li><a href="#">Send Notifications</a></li> -->
+        <!-- <li><a href="/collection/change_password">Change Password</a></li> -->
+        
         
       </ul>
     </div>
@@ -65,14 +55,13 @@
 <div class="container-fluid">
     <div class="row content">
       <div class="col-sm-2 sidenav hidden-xs">
-        <h2>ADMIN</h2>
+        <h2>COLLECTION</h2>
         <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="/pwms_admin/dashboard">Dashboard</a></li>
-          <li><a href="/pwms_admin/approveuser">Approve user</a></li>
-          <li><a href="/pwms_admin/viewrequest">View Request</a></li>
-          <li><a href="/pwms_admin/addagent">Add Agent</a></li>
-          <li><a href="/pwms_admin/viewagent">View Agent</a></li>
-          <li><a href="/pwms_admin/notifications">Send Notifications</a></li>
+            <li class="active"><a href="/collection/dashboard">Dashboard</a></li>
+            <li><a href="/collection/profile">Profile</a></li>
+            <li><a href="/collection/approve_request">Approve Request</a></li>
+            <!-- <li><a href="#">Send Notifications</a></li> -->
+            <!-- <li><a href="/collection/change_password">Change Password</a></li> -->
         </ul><br>
       </div>
       <br>
